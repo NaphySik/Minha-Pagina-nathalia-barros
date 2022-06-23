@@ -1,0 +1,43 @@
+#botao {
+    color: black;
+    background-color: bisque;
+    text-align: center;
+}
+table{
+    background-color: bisque;
+    border: 1px solid;
+    width: 70%;
+    margin: 0 auto;
+}
+
+h1 {
+    background-color: azure;
+    border: 1px solid;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2{
+    background-color: azure;
+    border: 1px solid;
+    width: 70%;
+    margin: 0 auto;  
+    text-align: center;
+}
+
+h3{
+    background-color: azure;
+    border: 1px solid;
+    width: 70%;
+    margin: 0 auto;  
+    text-align: center;
+}
+
+p{
+    background-color: azure;
+    border: 1px solid;
+    width: 70%;
+    margin: 0 auto;  
+    text-align: center;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Calculando seu peso pela Galáxia</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        Peso na Terra(Kg):<input id="pesot" type="number"> <br />
+
+        <input type="radio" name="calc" id="merc"/> Mercúrio
+        <input type="radio" name="calc" id="mart"/> Marte
+        <input type="radio" name="calc" id="satu"/> Saturno<br />
+        <input type="radio" name="calc" id="venu"/> Vênus
+        <input type="radio" name="calc" id="jupi"/> Júpiter
+        <input type="radio" name="calc" id="uran"/> Urano<br />
+
+        
+        <input type="button" id="botao" value="calcular Peso">
+
+        <p id="resultado"></p>
+      
+        <script>
+            pesot.onchange = voltarValor;
+
+            function voltarValor(){
+                resultado.innerHTML = "resultado:";
+            }
+
+            botao.onclick = function(){
+                voltarValor();
+                var pesoterra = parseInt(document.getElementById("pesot").value);
+                var gravidade ='';
+                var texto='';
+               
+               
+
+                if(document.getElementById('merc').checked){
+                    gravidade = 0.37;
+                    texto = 'O seu peso em Mercúrio é: ' + multiplicacao(pesoterra, gravidade) + ' Kg';
+                } 
+                if(document.getElementById('mart').checked){ 
+                    gravidade = 0.38;
+                    texto = 'O seu peso em Marte é: ' + multiplicacao(pesoterra, gravidade) + ' Kg';
+                }
+                if(document.getElementById('satu').checked){ 
+                    gravidade = 1.15;
+                    texto = 'O seu peso em Saturno é: ' + multiplicacao(pesoterra, gravidade) + ' Kg';
+                }
+                if(document.getElementById('venu').checked){ 
+                    gravidade = 0.88;
+                    texto = 'O seu peso em Vênus é: ' + multiplicacao(pesoterra, gravidade) + ' Kg';
+                }
+                if(document.getElementById('jupi').checked){ 
+                    gravidade = 2.64;
+                    texto = 'O seu peso em Júpiter é: ' + multiplicacao(pesoterra, gravidade) + ' Kg';
+                }
+                if(document.getElementById('uran').checked){ 
+                    gravidade = 1.17;
+                    texto = 'O seu peso em Urano é: ' + multiplicacao(pesoterra, gravidade) + ' Kg';
+                }
+
+                resultado.innerHTML = texto;
+              
+            }
+
+            
+            function multiplicacao(x, y)
+            {
+  
+             return (x*y);
+            }
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Calculando a gasosa</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        Capacidade do tanque de combustível: <input type="number" id="val" placeholder="Informe a capacidade do tanque" style="background-color: aqua;"><br>
+        valor que tem pra gastar: <input type="number" id="valor2" placeholder="Informe o valor disponível"><br>
+
+        <input type="radio" name="calc" id="al"/> Alcool
+        <input type="radio" name="calc" id="gaso"/> gasolina<br />
+        
+
+        <input type="button" id="botao" value="calcular">
+        <p id="resultado">Você pode comprar:</p>
+        <p id="aviso">...</p>
+      
+        <script>
+            val.onchange = voltarValor;
+            valor2.onchange = voltarValor;
+
+            function voltarValor(){
+                resultado.innerHTML = "resultado:";
+                aviso.innerHTML = "...";
+            }
+
+            botao.onclick = function(){
+                voltarValor();
+                var valor = parseInt(document.getElementById("val").value);
+                var valor2 = parseInt(document.querySelector("#valor2").value);
+                var texto='';
+                var alerta = '';
+               
+
+                if(document.getElementById('al').checked){  
+                    texto = "você conseguirá comprar " + divisao(valor2, 3.96) + 'litros';
+                    if (divisao(valor2,3.96)> valor){
+                        texto = "você conseguirá comprar " + divisao(valor2, 3.96) + 'litros';
+                        alerta = 'SEU TANQUE NÃO TEM CAPACIDADE PARA ESSA QUANTIDADE!!!!'; 
+                        
+                    }
+                
+                }
+                if(document.getElementById('gaso').checked){
+                    texto = "você conseguirá comprar " + divisao(valor2, 4.75) + 'litros';
+                    if (divisao(valor2,4.75)> valor){
+                        texto = "você conseguirá comprar " + divisao(valor2, 4.75) + 'litros';
+                        alerta = 'SEU TANQUE NÃO TEM CAPACIDADE PARA ESSA QUANTIDADE!!!!'; 
+                    }
+                }
+
+                resultado.innerHTML = texto;
+                aviso.innerHTML = alerta;
+            }
+
+            function divisao(x, y)
+            {
+  
+             return (x/y);
+            }
+            
+
+
+        </script>
+    </body>
+</html>

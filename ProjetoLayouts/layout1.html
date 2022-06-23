@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.item1 { grid-area: logo; }
+.item2 { grid-area: navi; }
+.item3 { grid-area: header; }
+.item4 { grid-area: sidebar; }
+.item5 { grid-area: body; }
+.item6 { grid-area: footer; }
+
+
+@media screen {
+    .grid-container{
+         grid-template-areas:
+         'logo logo logo logo logo logo'
+         'navi navi navi navi navi navi'
+         'header header header header header header'
+         'sidebar sidebar sidebar sidebar sidebar sidebar'
+         'body body body body body body'
+         'footer footer footer footer footer footer'; 
+        
+    }
+}
+@media screen and (min-width:640px) {
+    .grid-container{
+         grid-template-areas:
+         'logo logo logo logo logo logo'
+         'navi navi navi navi navi navi'
+         'header header header header header header'
+         'sidebar sidebar body body body body'
+         'footer footer footer footer footer footer';
+        
+    }   
+    } 
+@media screen and (min-width:960px) {
+    .grid-container{
+         grid-template-areas:
+         'logo logo logo logo logo logo'
+         'navi navi navi navi navi navi'
+         'header header header header header header'
+         'sidebar sidebar body body body body'
+         'footer footer footer footer footer footer' 
+            
+    }
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  background-color: #a15915;
+  padding: 10px;
+  
+}
+
+.grid-container > div {
+  background-color: rgba(238, 230, 203, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.item4, .item5 {
+  padding: 10px;
+  height: 300px; 
+}
+
+.item3{
+  height: 60px;
+}
+
+.item1{
+  display: flex;
+  justify-content: space-between
+}
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="item1">Logo</div>
+  <div class="item2">Navigation</div>
+  <div class="item3">Header / Banner</div> 
+  <div class="item4">Side Bar</div>
+  <div class="item5">Body Area</div>
+  <div class="item6">Footer</div>
+</div>
+
+</body>
+</html>

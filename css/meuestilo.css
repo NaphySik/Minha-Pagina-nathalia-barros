@@ -1,0 +1,166 @@
+.color1 {color: #562c4f;}
+.color2 {color: #7a3756;}
+.color3 {color: #ad4d60;}
+.color4 {color: #ee756b;}
+.color5 {color: #ffb374;}
+
+.item1 { grid-area: logoN; }
+.item2 { grid-area: header; }
+.item3 { grid-area: intro; }
+.item4 { grid-area: box1; }
+.item5 { grid-area: box2; }
+.item6 { grid-area: box3; }
+.item7 { grid-area: footer; }
+/*
+Os sites usados para as imagens de domínio público foram:
+Pixabay - imagem "systemAnalyst", clounds, cp, back, roxo
+vecteezy - boque
+
+Editor Trakto -
+imagem 'soueu'
+*/
+@media screen {
+    .grid-container{
+         grid-template-areas:
+         'logoN logoN logoN logoN logoN logoN'
+         'header header header header header header'
+         'intro intro intro intro intro intro'
+         'box1 box1 box1 box1 box1 box1'
+         'box2 box2 box2 box2 box2 box2'
+         'box3 box3 box3 box3 box3 box3'
+         'footer footer footer footer footer footer'; 
+        
+    }
+}
+@media screen and (min-width:640px) {
+    .grid-container{
+         grid-template-areas:
+         'logoN logoN logoN logoN logoN logoN'
+         'header header header header header header'
+         'intro intro intro intro intro intro'
+         'box1 box1 box1 box2 box2 box2'
+         'box3 box3 box3 box3 box3 box3'
+         'footer footer footer footer footer footer';
+        
+    }   
+    } 
+@media screen and (min-width:960px) {
+    .grid-container{
+         grid-template-areas:
+         'logoN logoN logoN logoN logoN logoN'
+         'header header header header header header'
+         'intro intro intro intro intro intro'
+         'box1 box2 box2 box3 box3 box3'
+         'footer footer footer footer footer footer'; 
+            
+    }
+}
+.grid-container{
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.item1{
+  display: flex;
+  justify-content: space-between;
+  color:#562c4f;
+  background-color:#ffb374;
+  background-image: url("../imagens/folha.png");
+  background-size: 100%;
+}
+
+.item4, .item5, .item6{
+  height: 550px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+
+.item2{
+  height: 85px;
+  color:#7a3756;
+}
+
+.item3{
+    background-color:#762736;
+    background-image: url("../imagens/cp.jpg");
+    background-size: 100%;
+    color: #562c4f;
+  
+}
+
+.item4{
+    background-color:white;
+    background-image: url("../imagens/flor.jpg");
+    background-size: cover; 
+   
+   
+
+}
+
+
+
+#back{
+    background-color: #f4d1e0;
+    /*background-image: url('../imagens/back.jpg');
+    background-size: cover;*/
+    font-size: 80%;
+  
+}
+
+.item7{
+    background-color:#ffb374;
+    background-image: url("../imagens/folha.png");
+    background-size: 100%;
+}
+
+
+#intro, #eu, #avaliacoes, #java{
+    font-style: italic;
+    font-weight: 500;
+    font-size: x-large;
+}
+
+#email, #telefone, #trabalho{
+    background-color: white;
+}
+
+#trabalho{
+  background-color: white;
+  font-style: italic;
+    font-weight: 500;
+    font-size: xx-large;
+}
+
+.item6{
+  background-image: url('../imagens/boque.jpg');
+  background-size:contain;
+
+}
+
+#eu, #java{
+  background-color: rgb(244, 230, 243);
+}
+
+.item5, .item2{
+  background-image: url('../imagens/sakura.jpg');
+  background-size: cover;
+}
+
+#vindas{
+  background-color: white;
+  text-shadow:1px 1px 3px #666, -1px -1px 3px #fff, 1px
+  1px #666, -1px -1px #fff;
+
+}
+
+
+
+

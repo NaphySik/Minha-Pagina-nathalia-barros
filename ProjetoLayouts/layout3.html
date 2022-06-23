@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.item1 { grid-area: logo; }
+.item2 { grid-area: header; }
+.item3 { grid-area: side; }
+.item4 { grid-area: body; }
+.item5 { grid-area: footer; }
+/*
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'logo logo logo logo logo logo'
+    'header header header header header header'
+    'body body body body body body'
+    'footer footer footer footer footer footer';
+  gap: 10px;
+  background-color: #a15915;
+  padding: 10px;
+}
+*/
+@media screen {
+    .grid-container{
+         grid-template-areas:
+         'logo logo logo logo logo logo'
+         'side side side side side side'
+         'heater heater header header header header'
+         'body body body body body body'
+         'footer footer footer footer footer footer'; 
+         
+    }
+}
+@media screen and (min-width:640px) {
+    .grid-container{
+         grid-template-areas:
+         'logo logo logo logo logo logo'
+         'side side header header header header'
+         'body body body body body body'
+         'footer footer footer footer footer footer';
+        
+    }   
+    } 
+@media screen and (min-width:960px) {
+    .grid-container{
+         grid-template-areas:
+         'logo logo logo logo logo logo'
+         'side side header header header header'
+         'side side body body body body'
+         'footer footer footer footer footer footer'; 
+            
+    }
+}
+
+
+
+.grid-container{
+  display: grid;
+  gap: 10px;
+  background-color: #a15915;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(238, 230, 203, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.item2,.item4{
+  display: flex;
+  align-items: flex-end;
+  align-items: baseline;
+}
+
+.item4{
+  height: 200px;
+  
+}
+
+.item2{
+  height: 100px;
+}
+
+.item1{
+  display: flex;
+  justify-content: space-between;
+}
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="item1">Logo</div>
+  <div class="item2">Header / Banner</div> 
+  
+    <h2>Side Bar Navigation</h2>
+    
+   
+  <div class="item4">Body Area</div>
+  <div class="item5">Footer</div>
+</div>
+
+</body>
+</html>
+

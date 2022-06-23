@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    <h1 id="titulo"></h1>
+    <p id="texto">Calculando saldo...</p>
+    <a href="../questionárioJAVA/questao4.html" target="_self" color="purple"> Clique aqui para ir para a quarta questão</a>
+    <script>
+        alert('calculando aumento de 2%');
+        var saldo = parseInt(prompt('Digite o saldo da sua aplicação: '));
+        var percentual = 0.02;
+        var aumento = saldo * percentual;
+        var novo_saldo = saldo + aumento;
+
+        alert('o novo saldo é ' + novo_saldo);
+
+    </script>
+</body>
+</html>
